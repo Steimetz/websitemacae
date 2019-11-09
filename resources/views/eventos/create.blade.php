@@ -21,7 +21,7 @@
 </div>
 <div class="form-group">
     {{Form::label('body', 'Conteúdo')}}
-    {{Form::textarea('body', '', ['id' => 'editor', 'class' => 'form-control', 'placeholder' => 'Body Text'])}}
+    {{Form::textarea('body', '', ['id' => 'editor', 'class' => 'form-control', 'placeholder' => 'Conteúdo'])}}
 </div>
 <div class="form-group">
     {{Form::label('data', 'Data do evento')}}

@@ -24,10 +24,18 @@
           <div class="evento-wrap">
             <figure>
             <img style="width:100%" src="/storage/cover_images/{{$evento->cover_image}}" class="img-fluid" alt="">
-              <a " data-lightbox="evento" data-title="App 1" class="link-preview" title="Preview"><i  class="fa fa-eye"></i></a>
+              <a " data-lightbox="evento" data-toggle="modal" data-target="#{{$evento->id}}" class="link-preview" title="Preview"><i  class="fa fa-eye"></i></a>
               <a href="/eventos/{{$evento->id}}" class="link-details" ><i class="fa fa-list-alt"></i></a>
             </figure>
-
+            <div id="{{$evento->id}}" class="modal fade" tabindex="-1" role="dialog"  aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="/storage/cover_images/{{$evento->cover_image}}" class="img-responsive">
+                    </div>
+                </div>
+              </div>
+            </div>
             <div class="evento-info">
             <h4><a>{{$evento->name}}</a></h4>
             <p>{{$evento->data}}</p>
