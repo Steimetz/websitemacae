@@ -27,10 +27,18 @@ Route::get('/eventos', function () {
 Route::get('/noticias', function () {
     return view('noticias.index');
 });
+Route::get('/contato', function () {
+    return view('pages.contato');
+});
 
+Route::get('/dashboard', function () {
+    return view('pages.dashboard');
+});
 
+Route::post('/contato', 'ComentariosController@store')->name('criarComentario');
 Route::resource('eventos', 'EventsController');
 Route::resource('noticias','NoticiasController');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
