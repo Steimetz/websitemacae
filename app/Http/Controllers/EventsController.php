@@ -62,6 +62,7 @@ class EventsController extends Controller
         $evento->name = $request->input('name');
         $evento->body = $request->input('body');
         $evento->data = $request->input('data');
+        $evento->data = $request->input('link');
        // $evento->user_id = auth()->user()->id;
         $evento->cover_image = $fileNameToStore;
         $evento->save();

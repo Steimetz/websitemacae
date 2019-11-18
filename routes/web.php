@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+  //  return view('index');
+//});
 
 Route::get('/sobre', function () {
     return view('pages.sobre');
@@ -31,6 +31,7 @@ Route::get('/contato', function () {
     return view('pages.contato');
 });
 
+
 Route::get('/dashboard', function () {
     return view('pages.dashboard');
 });
@@ -38,6 +39,11 @@ Route::get('/dashboard', function () {
 Route::post('/contato', 'ComentariosController@store')->name('criarComentario');
 Route::resource('eventos', 'EventsController');
 Route::resource('noticias','NoticiasController');
+Route::get('/', function () {
+    $noticias = DB::table('posts')->get();
+    return view('index',compact('noticias'));
+});
+
 
 Auth::routes();
 

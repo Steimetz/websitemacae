@@ -37,7 +37,7 @@
                     
                   <h4 class="fa fa-calendar"></h4> {{$evento->data}}
                 <br><br>
-                <button type="button" style="margin-left: 30%" class="btn btn-info">Cadastrar no evento</button>
+               <a href="{{url($evento->link)}}" ><button type="button" style="margin-left: 30%" class="btn btn-info">Cadastrar no evento</button></a>
             </div>
             </div>
           </div>

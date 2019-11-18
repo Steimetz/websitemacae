@@ -21,7 +21,7 @@
                    <div class="single-blog">
                       <div class="single-blog-img">
                         <a href="blog.html">
-                                                <img src="https://www.stockvault.net/data/2018/10/22/255762/preview16.jpg" alt="">
+                                                <img src="/storage/cover_images_noticias/{{$post->cover_image_noticias}}" alt="">
                                             </a>
                       </div>
                       <div class="blog-meta">

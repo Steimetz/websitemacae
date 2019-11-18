@@ -31,6 +31,10 @@
     {{Form::label('cover_image', 'Adicionar arte de divulgação')}}
     {{Form::file('cover_image')}}
 </div>
+<div class="form-group">
+    {{Form::label('link', 'Link para o Sympla')}}
+    {{Form::text('link', '', [ 'class' => 'form-control'])}}
+</div>
 {{Form::submit('Adicionar', ['class'=>'btn btn-primary'])}}
 {!! Form::close() !!}
 </div>

@@ -1,48 +1,53 @@
 <!doctype html>
 <html lang="en">
 <head>
+
    
   <meta charset="utf-8">
   <title>SPE Macaé Section</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
-
-  <!-- Favicons -->
-  <link href="{{URL::asset('img/favicon.png')}}" rel="icon">
+  <link href="{{URL::asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{URL::asset('css/style.css')}}" rel="stylesheet">
+  <!-- Favicons 
+  <link href="{{URL::asset('img/macaelogo.png')}}" rel="icon">
   <link href="{{URL::asset('img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
 
-  <!-- Bootstrap CSS File -->
-  <link href="{{URL::asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <!-- Bootstrap CSS File 
+ 
 
-  <!-- Libraries CSS Files -->
+  <!-- Libraries CSS Files 
   <link href="{{URL::asset('lib/nivo-slider/css/nivo-slider.css')}}" rel="stylesheet">
   <link href="{{URL::asset('lib/owlcarousel/owl.carousel.css')}}" rel="stylesheet">
   <link href="{{URL::asset('lib/owlcarousel/owl.transitions.css')}}" rel="stylesheet">
   <link href="{{URL::asset('lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
   <link href="{{URL::asset('lib/animate/animate.min.css')}}" rel="stylesheet">
   <link href="{{URL::asset('lib/venobox/venobox.css')}}" rel="stylesheet">
-
+-->
   <!-- Nivo Slider Theme -->
   <link href="{{URL::asset('css/nivo-slider-theme.css')}}" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="{{URL::asset('css/style.css')}}" rel="stylesheet">
+  
 
   <!-- Responsive Stylesheet File -->
   <link href="{{URL::asset('css/responsive.css')}}" rel="stylesheet">
-  <script src="{{URL::asset('https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js')}}" referrerpolicy="origin"></script>
+ 
 
   
-
+  
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
 
-  <div id="preloader"></div>
+ <!--<div id="preloader"></div>-->
+ <div id="loading">
+   />
+</div>
 
   <header>
     <!-- header-area start -->
@@ -64,7 +69,7 @@
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="/">
                   
-                  <!-- Uncomment below if you prefer to use an image logo -->
+               
                   <div class="logo-image">
                    <img src="{{URL::asset('img/macaelogo.png')}}" margin-bottom= "10px"  width="98px" alt="" title=""> 
                   </div>
@@ -98,6 +103,13 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                            <li>
+                                    <a href="/home">
+                                        Dashboard
+                                    </a>
+
+                                
+                                </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
@@ -109,6 +121,8 @@
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
+                                
+                          
                             </ul>
                         </li>
                     @endif
@@ -129,7 +143,7 @@
                 -->
                   <li>
                   
-                    <a class="page-scroll" href="#contact">Contato</a>
+                    <a class="page-scroll" href="/contato">Contato</a>
                   </li>
                 </ul>
               </div>
@@ -164,7 +178,19 @@
   <script>
       CKEDITOR.replace( 'editor' );
   </script>
+  <script> 
+  $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+$(window).on('load', function(){
+  setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+});
+function removeLoader(){
+    $( "#loadingDiv" ).fadeOut(500, function() {
+      // fadeOut complete. Remove the loading div
+      $( "#loadingDiv" ).remove(); //makes page more lightweight 
+  });  
+}
+</script>
 </body>
-@yield('content')
+
 
 </html>

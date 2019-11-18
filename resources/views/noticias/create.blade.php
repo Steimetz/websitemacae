@@ -9,7 +9,7 @@
       </div>
     
 <div class="container">
-{!! Form::open(['action' => 'EventsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
+{!! Form::open(['action' => 'NoticiasController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
 <div class="form-group">
     {{Form::label('titulo', 'Título da notícia')}}
     {{Form::text('titulo', '', ['class' => 'form-control', 'placeholder' => 'Título da notícia'])}}
@@ -24,7 +24,7 @@
 </div>
 <div class="form-group">
     {{Form::label('cover_image', 'Adicionar arte de divulgação')}}
-    {{Form::file('cover_image')}}
+    {{Form::file('cover_image_noticias')}}
 </div>
 {{Form::submit('Adicionar', ['class'=>'btn btn-primary'])}}
 {!! Form::close() !!}

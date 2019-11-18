@@ -17,6 +17,7 @@ class NoticiasController extends Controller
         $posts = Post::all();
         return view('noticias.index')->with('posts', $posts);
     }
+  
 
     /**
      * Show the form for creating a new resource.
@@ -40,30 +41,29 @@ class NoticiasController extends Controller
             'titulo' => 'required',
             'body' => 'required',
             'descricao'=>'required',
-            'cover_image_noticia' => 'image|nullable|max:1999'
+            'cover_image_noticias   ' => 'image|nullable|max:1999'
         ]);
         // upload da imagem
-        if($request->hasFile('cover_image')){
+        if($request->hasFile('cover_image_noticias')){
             // nome do arquivo com a extensão
-            $filenameWithExt = $request->file('cover_image_noticia')->getClientOriginalName();
+            $filenameWithExt = $request->file('cover_image_noticias')->getClientOriginalName();
             // só o nome do arquivo
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
             // só extensão
-            $extension = $request->file('cover_image_noticia')->getClientOriginalExtension();
+            $extension = $request->file('cover_image_noticias')->getClientOriginalExtension();
             // guardar o nome do arquivo
             $fileNameToStore= $filename.'_'.time().'.'.$extension;
             // upload do arquivo
-            $path = $request->file('cover_image_noticia')->storeAs('public/cover_images_noticia', $fileNameToStore);
+            $path = $request->file('cover_image_noticias')->storeAs('public/cover_images_noticias', $fileNameToStore);
         } else {
             $fileNameToStore = 'noimage.jpg';
         }
         // Create Post
         $noticia = new Post;
-        $noticia->name = $request->input('titulo');
+        $noticia->titulo = $request->input('titulo');
         $noticia->body = $request->input('body');
-        $noticia->data = $request->input('descricao');
-        $noticia->user_id = auth()->user()->id;
-        $noticia->cover_image = $fileNameToStore;
+        $noticia->descricao = $request->input('descricao');
+        $noticia->cover_image_noticias = $fileNameToStore;
         $noticia->save();
     }
 
@@ -112,4 +112,6 @@ class NoticiasController extends Controller
     {
         //
     }
+  
 }
+
