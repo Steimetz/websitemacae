@@ -10,17 +10,16 @@
   <meta content="" name="description">
   <link href="{{URL::asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{URL::asset('css/style.css')}}" rel="stylesheet">
-  <!-- Favicons 
   <link href="{{URL::asset('img/macaelogo.png')}}" rel="icon">
   <link href="{{URL::asset('img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
-  <!-- Google Fonts 
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
 
-  <!-- Bootstrap CSS File 
+  <!-- Bootstrap CSS File --> 
  
 
-  <!-- Libraries CSS Files 
+  <!-- Libraries CSS Files -->
   <link href="{{URL::asset('lib/nivo-slider/css/nivo-slider.css')}}" rel="stylesheet">
   <link href="{{URL::asset('lib/owlcarousel/owl.carousel.css')}}" rel="stylesheet">
   <link href="{{URL::asset('lib/owlcarousel/owl.transitions.css')}}" rel="stylesheet">

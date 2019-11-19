@@ -16,7 +16,7 @@
                 <div class="single-team-member">
                   <div class="team-img">
                 <a>
-                                            <img src="img/team/1.jpg" alt="">
+                                            <img src="https://via.placeholder.com/520x640/" alt="">
                                         </a>
                     <div class="team-social-icon text-center">
                       <ul>
@@ -27,12 +27,12 @@
                         </li>
                         <li>
                           <a href="mailto:youremail@youremail.com">
-                                                        <i class="fa fa-twitter"></i>
+                                                        <i class="fa fa-envelope"></i>
                                                     </a>
                         </li>
                         <li>
                           <a href="#">
-                                                        <i class="fa fa-instagram"></i>
+                                                        <i class="fa fa-linkedin"></i>
                                                     </a>
                         </li>
                       </ul>

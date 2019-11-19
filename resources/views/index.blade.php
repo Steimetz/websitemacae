@@ -2,8 +2,8 @@
   <!-- Start Slider Area -->
   <div id="home" class="slider-area">
     <div class="bend niceties preview-2">
-      <div id="ensign-nivoslider" class="slides">
-      @foreach($noticias as $noticia)
+     @foreach($noticias as $noticia) <div id="ensign-nivoslider" class="slides">
+      
         <img src="/storage/cover_images_noticias/{{$noticia->cover_image_noticias}}" alt=""  />
       
       </div>
