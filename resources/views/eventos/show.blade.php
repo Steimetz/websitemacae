@@ -1,5 +1,7 @@
 @extends('layout.app')
+@section('content')
 <!-- Start About area -->
+
 <div id="about" class="about-area area-padding">
     <div class="container">
       <div class="row">
@@ -35,9 +37,9 @@
                 <br><br>
                
                     
-                  <h4 class="fa fa-calendar"></h4> {{$evento->data}}
+                  <h4 class="fa fa-calendar"></h4>{{ \Carbon\Carbon::parse($evento->data)->format('d/m/Y')}}
                 <br><br>
-               <a href="{{url($evento->link)}}" ><button type="button" style="margin-left: 30%" class="btn btn-info">Cadastrar no evento</button></a>
+               <a href=" http://{{$evento->link}}" ><button type="button" style="margin-left: 30%" class="btn btn-info">Cadastrar no evento</button></a>
             </div>
             </div>
           </div>
@@ -47,3 +49,4 @@
     </div>
   </div>
   <!-- End About area -->
+@endsection

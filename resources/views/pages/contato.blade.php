@@ -1,4 +1,5 @@
 @extends('layout.app')
+@section('content')
 <br><br><br><br><br>
 <div id="contact" class="contact-area">
 <div class="container">
@@ -51,3 +52,4 @@
     </div>
   </div>
   <!-- End Contact Area -->
+  @endsection

@@ -1,33 +1,75 @@
 @extends('layout.app')
+@section('content')
   <!-- Start Slider Area -->
-  <div id="home" class="slider-area">
-    <div class="bend niceties preview-2">
-     @foreach($noticias as $noticia) <div id="ensign-nivoslider" class="slides">
-      
-        <img src="/storage/cover_images_noticias/{{$noticia->cover_image_noticias}}" alt=""  />
-      
-      </div>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
 
-      <!-- direction 1 -->
-      <div id="{{$noticia->id}}" class="slider-direction slider-one">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="slider-content">
-                <!-- layer 1 -->
-                <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
-                  <h2 class="title1">{{$noticia->titulo}} </h2>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        @endforeach
-      </div>
-      </div>
-      </div>
+<body>
 
+<br><br><br><br><br>
+<div class="w3-content w3-display-container" style="width:600px;height:400px">
+@foreach($noticias as $noticia)
+  <a href="/noticias/{{$noticia->id}}" target="_blank"><img href="/noticias/{{$noticia->id}}" class="mySlides w3-animate-fading" src="/storage/cover_images_noticias/{{$noticia->cover_image_noticias}}" style="width:100%; height:auto">
+  </a>
+  @endforeach
+
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:600px">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 10000); // Change image every 2 seconds
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
 
   <!-- Start About area -->
   <div id="about" class="about-area area-padding">
@@ -411,3 +453,4 @@
       </div>
     </div>
     </footer>
+    @endsection

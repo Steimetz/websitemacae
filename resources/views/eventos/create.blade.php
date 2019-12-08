@@ -1,4 +1,5 @@
 @extends('layout.app')
+@section('content')
 <script>
     tinymce.init({
       selector: '#myeditor'
@@ -38,3 +39,4 @@
 {{Form::submit('Adicionar', ['class'=>'btn btn-primary'])}}
 {!! Form::close() !!}
 </div>
+@endsection

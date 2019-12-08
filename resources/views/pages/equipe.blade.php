@@ -1,5 +1,5 @@
 @extends('layout.app')
-
+@section('content')
 <br><br>
 <div id="team" class="our-team-area area-padding">
         <div class="container">
@@ -289,4 +289,4 @@
           
         </div>
       </div>
-      
+      @endsection

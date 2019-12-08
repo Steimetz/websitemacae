@@ -1,4 +1,5 @@
 @extends('layout.app')
+@section('content')
 <br><br><br><br><br>
 <div class="container ">
     
@@ -29,3 +30,4 @@
 {{Form::submit('Adicionar', ['class'=>'btn btn-primary'])}}
 {!! Form::close() !!}
 </div>
+@endsection

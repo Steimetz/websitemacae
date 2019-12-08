@@ -1,6 +1,7 @@
 @extends('layout.app')
- <!-- Start Blog Area -->
+@section('content')
  <br><br>
+ 
  <div id="blog" class="blog-area">
         <div class="blog-inner area-padding">
           <div class="blog-overly"></div>
@@ -19,14 +20,14 @@
               <div style="margin-top:50px;"class="col-md-4 col-sm-4 col-xs-12">
                    
                    <div class="single-blog">
-                      <div class="single-blog-img">
-                        <a href="blog.html">
-                                                <img src="/storage/cover_images_noticias/{{$post->cover_image_noticias}}" alt="">
-                                            </a>
+                      <div  style= "background-image: url(/storage/cover_images_noticias/{{$post->cover_image_noticias}}); padding-top: 56.25%;background-size:cover">
+                     
+                 
+                                            
                       </div>
                       <div class="blog-meta">
                         <span class="date-type">
-                                                <i class="fa fa-calendar"></i>{{$post->created_at}}
+                                                <i class="fa fa-calendar"></i>{{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y')}}
                                             </span>
                       </div>
                       <div class="blog-text">
@@ -42,6 +43,9 @@
                     </div>
                     <!-- Start single blog -->
                   </div>
+                  <div id="{{$post->id}}" class="modal fade" tabindex="-1" role="dialog"  aria-hidden="true">
+              
+            </div>
 
                   @endforeach
                             <!-- Start single blog -->
@@ -53,3 +57,4 @@
         </div>
       </div>
       <!-- End Blog -->
+      @endsection

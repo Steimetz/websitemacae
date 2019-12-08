@@ -40,7 +40,7 @@ Route::post('/contato', 'ComentariosController@store')->name('criarComentario');
 Route::resource('eventos', 'EventsController');
 Route::resource('noticias','NoticiasController');
 Route::get('/', function () {
-    $noticias = DB::table('posts')->get();
+    $noticias = DB::table('posts')->orderBy('created_at','desc')->take(3)->get();;
     return view('index',compact('noticias'));
 });
 

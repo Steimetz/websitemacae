@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt">
 <head>
 
    
@@ -8,8 +8,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
-  <link href="{{URL::asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-  <link href="{{URL::asset('css/style.css')}}" rel="stylesheet">
+  
   <link href="{{URL::asset('img/macaelogo.png')}}" rel="icon">
   <link href="{{URL::asset('img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
@@ -18,6 +17,8 @@
 
   <!-- Bootstrap CSS File --> 
  
+  <link href="{{URL::asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{URL::asset('css/style.css')}}" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
   <link href="{{URL::asset('lib/nivo-slider/css/nivo-slider.css')}}" rel="stylesheet">
@@ -26,9 +27,9 @@
   <link href="{{URL::asset('lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
   <link href="{{URL::asset('lib/animate/animate.min.css')}}" rel="stylesheet">
   <link href="{{URL::asset('lib/venobox/venobox.css')}}" rel="stylesheet">
--->
+
   <!-- Nivo Slider Theme -->
-  <link href="{{URL::asset('css/nivo-slider-theme.css')}}" rel="stylesheet">
+
 
   <!-- Main Stylesheet File -->
   
@@ -43,10 +44,7 @@
 
 <body data-spy="scroll" data-target="#navbar-example">
 
- <!--<div id="preloader"></div>-->
- <div id="loading">
-   />
-</div>
+ <div id="preloader"></div>
 
   <header>
     <!-- header-area start -->
@@ -177,18 +175,8 @@
   <script>
       CKEDITOR.replace( 'editor' );
   </script>
-  <script> 
-  $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
-$(window).on('load', function(){
-  setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
-});
-function removeLoader(){
-    $( "#loadingDiv" ).fadeOut(500, function() {
-      // fadeOut complete. Remove the loading div
-      $( "#loadingDiv" ).remove(); //makes page more lightweight 
-  });  
-}
-</script>
+  
+@yield('content')
 </body>
 
 
