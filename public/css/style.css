@@ -1150,7 +1150,7 @@ div#preloader {
 }
 
 .awesome-img>a::after {
-  background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+  background: rgba(3, 9, 99, 0.76) none repeat scroll 0 0;
   content: "";
   height: 100%;
   left: 0;
@@ -1192,11 +1192,11 @@ div#preloader {
 }
 
 .project-dec h4:hover {
-  color: #fff;
+  color: #ffff !important;
 }
 
 .project-dec h4 {
-  color: #ddd;
+  color: #ffff !important;
   font-size: 24px;
   margin-top: -45px;
   padding-top: 50%;
@@ -1206,7 +1206,7 @@ div#preloader {
 }
 
 .project-dec span {
-  color: #ddd;
+  color: #ffff;
   font-size: 13px;
 }
 

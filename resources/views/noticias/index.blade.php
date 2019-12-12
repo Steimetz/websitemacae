@@ -9,7 +9,7 @@
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="section-headline text-center">
-                  <h2>Ultimas notícias</h2>
+                  <h2>Notícias</h2>
                 </div>
               </div>
             </div>
@@ -44,15 +44,7 @@
                     <!-- Start single blog -->
                   </div>
                   <div id="{{$post->id}}" class="modal fade" tabindex="-1" role="dialog"  aria-hidden="true">
-              
-            </div>
-
-                  @endforeach
-                            <!-- Start single blog -->
-                          </div>
-              
-              <!-- End Right Blog-->
-            </div> 
+                 </div> 
           </div>
         </div>
       </div>

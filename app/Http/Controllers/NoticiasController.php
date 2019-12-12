@@ -17,6 +17,12 @@ class NoticiasController extends Controller
         $posts = Post::all();
         return view('noticias.index')->with('posts', $posts);
     }
+    public function inicial()
+    {
+        $noticias = Post::all()->paginate(3);
+        return view('index')->with('noticias', $noticias);
+    }
+  
   
 
     /**

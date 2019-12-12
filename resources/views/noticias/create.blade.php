@@ -1,6 +1,8 @@
-@extends('layout.app')
-@section('content')
-<br><br><br><br><br>
+@extends('pages.dashboard')
+@section('conteudo')
+<link href="{{URL::asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{URL::asset('css/style.css')}}" rel="stylesheet">
+<br>
 <div class="container ">
     
       <div class="col-md-12 col-sm-12 col-xs-12">
