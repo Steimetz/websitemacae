@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<title>Dashboard Admin</title>
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
@@ -31,52 +31,64 @@
         <ul class="nav">
           <li class="active ">
             <a href="/dashboard">
-              <i class="now-ui-icons design_app"></i>
+              <i class="fas fa-home"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li>
-          <li class="active ">
+          <li>
             <a href="/noticias/create">
-              <i class="now-ui-icons education_atom"></i>
-              <p>Icons</p>
+              <i class="fas fa-plus"></i>
+              <p>Adicionar notícia</p>
             </a>
           </li>
           <li>
-            <a href="./map.html">
-              <i class="now-ui-icons location_map-big"></i>
-              <p>Maps</p>
+            <a href="/noticias/dash_index">
+              <i class="fas fa-globe"></i>
+              <p>Gerenciar notícias</p>
             </a>
           </li>
           <li>
             <a href="./notifications.html">
-              <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Notifications</p>
+              <i class="fas fa-plus"></i>
+              <p>Adicionar evento</p>
             </a>
           </li>
           <li>
             <a href="./user.html">
-              <i class="now-ui-icons users_single-02"></i>
-              <p>User Profile</p>
+              <i class="fas fa-calendar"></i>
+              <p>Gerenciar eventos</p>
             </a>
           </li>
           <li>
             <a href="./tables.html">
-              <i class="now-ui-icons design_bullet-list-67"></i>
-              <p>Table List</p>
+              <i class="fas fa-plus"></i>
+              <p>Adicionar newsletter</p>
             </a>
           </li>
           <li>
             <a href="./typography.html">
-              <i class="now-ui-icons text_caps-small"></i>
-              <p>Typography</p>
+              <i class="fas fa-newspaper"></i>
+              <p>Visualizar newsletter</p>
+            </a>
+          </li>
+          <li>
+            <a href="./typography.html">
+              <i class="fas fa-comments"></i>
+              <p>Comentários</p>
+            </a>
+          </li>
+          <li>
+            <a href="./typography.html">
+              <i class="fas fa-chart-bar"></i>
+              <p>Estatísticas</p>
             </a>
           </li>
          
         </ul>
       </div>
     </div>
-    <div class="main-panel" id="main-panel">
+    <div class="main-panel" style="background-color: #ffff" id="main-panel">
       <!-- Navbar -->
     
       <!-- End Navbar -->
@@ -102,6 +114,7 @@
       demo.initDashboardPageCharts();
 
     });
+    
   </script>
 @yield('conteudo')
 

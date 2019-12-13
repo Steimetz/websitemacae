@@ -1,6 +1,8 @@
-@extends('layout.app')
-@section('content')
- <br><br>
+@extends('pages.dashboard')
+@section('conteudo')
+<link href="{{URL::asset('lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+<link href="{{URL::asset('css/style.css')}}" rel="stylesheet">
+<br><br>
  
  <div id="blog" class="blog-area">
         <div class="blog-inner area-padding">

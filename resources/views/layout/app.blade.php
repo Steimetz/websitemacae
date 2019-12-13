@@ -48,7 +48,7 @@
 
   <header>
     <!-- header-area start -->
-    <div id="sticker" class="header-area">
+    <div id="sticker" class="header-area stick">
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12">
@@ -124,21 +124,7 @@
                         </li>
                     @endif
                 </ul>
-            
-                 
-
-                 <!-- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Drop Down<span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href=# >Drop Down 1</a></li>
-                      <li><a href=# >Drop Down 2</a></li>
-                    </ul> 
-                  </li>
-
-                  <li>
-                    <a class="page-scroll" href="#blog">Blog</a>
-                  </li>
-                -->
-                  <li>
+                    <li>
                   
                     <a class="page-scroll" href="/contato">Contato</a>
                   </li>
@@ -177,7 +163,7 @@
   </script>
   
 @yield('content')
-</body>
 
+</body>
 
 </html>

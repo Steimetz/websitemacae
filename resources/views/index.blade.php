@@ -2,7 +2,7 @@
 @section('content')
 
   <!-- Start About area -->
-  <div id="about" class="about-area area-padding">
+  <div   class="about-area area-padding">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -63,6 +63,41 @@
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center">
+            <h2>Próximos eventos</h2>
+          </div>
+        </div>
+      </div>
+      
+      
+       
+        <div class="awesome-project-content">
+         @foreach($eventos as $evento)
+          <div class="col-md-4 col-sm-4 col-xs-12 ">
+            <div class="single-awesome-project">
+              <div class="awesome-img">
+             <a class="venobox"  href="/storage/cover_images/{{$evento->cover_image}}">
+              <div  style= "background-image: url(/storage/cover_images/{{$evento->cover_image}}); padding-top: 70%;background-size:cover">
+                <div class="add-actions text-center">
+                  <div class="project-dec">
+                    
+                      <h4 style="color:white">{{$evento->name}}</h4>
+                      
+                    
+                    </div>
+                  </div>
+                </div>
+</a>
+              </div>
+            </div>
+          </div>
+          @endforeach
+        </div>
+
+        <div id="portfolio" class="portfolio-area area-padding fix">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="section-headline text-center">
             <h2>Últimas notícias</h2>
           </div>
         </div>
@@ -75,7 +110,7 @@
           <div class="col-md-4 col-sm-4 col-xs-12 ">
             <div class="single-awesome-project">
               <div class="awesome-img">
-             <a class="venobox" data-gall="myGallery" href="/storage/cover_images_noticias/{{$noticia->cover_image_noticias}}">
+             <a class="venobox"  href="/storage/cover_images_noticias/{{$noticia->cover_image_noticias}}">
               <div  style= "background-image: url(/storage/cover_images_noticias/{{$noticia->cover_image_noticias}}); padding-top: 70%;background-size:cover">
                 <div class="add-actions text-center">
                   <div class="project-dec">
@@ -92,15 +127,9 @@
           </div>
           @endforeach
         </div>
-          
-      
-    
-  <!-- Start Footer bottom Area -->
-  
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-  <script>
+        @endsection
+   
+<script>
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -132,57 +161,3 @@ function showSlides(n) {
 </script>
 
 </body>
-  <footer>
-    <div class="footer-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="footer-content">
-              <div class="footer-head">
-                  <div class="footer-logo">
-                      <img src="{{URL::asset('img/macaelogo.png')}}" margin-bottom= "10px"  width="100%" alt="" title=""> 
-                     </div>
-
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
-                <div class="footer-icons">
-                  <ul>
-                    <li>
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-google"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-pinterest"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end single footer -->
-          <div class="col-md-4 col-sm-4 col-xs-12">
-            <div class="footer-content">
-              <div class="footer-head">
-                <h4>information</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-                <div class="footer-contacts">
-                  <p><span>Tel:</span> +123 456 789</p>
-                  <p><span>Email:</span> contact@example.com</p>
-                  <p><span>Working Hours:</span> 9am-5pm</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- end single footer -->
-          
-        </div>
-      </div>
-    </div>
-    </footer>
-    @endsection

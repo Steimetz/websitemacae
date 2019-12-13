@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
-
+use App\Evento;
 class NoticiasController extends Controller
 {
     /**
@@ -14,13 +14,19 @@ class NoticiasController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::orderBy('created_at','desc')->get();
         return view('noticias.index')->with('posts', $posts);
+    }
+    public function index_dashboard()
+    {
+        $posts = Post::orderBy('created_at','desc')->get();
+        return view('noticias.dash_index')->with('posts', $posts);
     }
     public function inicial()
     {
         $noticias = Post::all()->paginate(3);
-        return view('index')->with('noticias', $noticias);
+        $eventos = Evento::all()->paginate(2);
+        return view('index')->with('noticias', $noticias)->with('eventos', $eventos);
     }
   
   

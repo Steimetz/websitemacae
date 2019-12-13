@@ -17,7 +17,8 @@ class EventsController extends Controller
         $eventos = Evento::all();
         return view('eventos.index')->with('eventos', $eventos);
     }
-
+    
+   
     /**
      * Show the form for creating a new resource.
      *

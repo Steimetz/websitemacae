@@ -30,6 +30,10 @@ Route::get('/noticias', function () {
 Route::get('/contato', function () {
     return view('pages.contato');
 });
+Route::get('/noticias/dash_index', function () {
+    return view('noticias.dash_index');
+});
+
 
 
 Route::get('/dashboard', function () {
@@ -40,8 +44,14 @@ Route::post('/contato', 'ComentariosController@store')->name('criarComentario');
 Route::resource('eventos', 'EventsController');
 Route::resource('noticias','NoticiasController');
 Route::get('/', function () {
-    $noticias = DB::table('posts')->orderBy('created_at','desc')->take(3)->get();;
-    return view('index',compact('noticias'));
+    $noticias = DB::table('posts')->orderBy('created_at','desc')->take(3)->get();
+    $eventos = DB::table('eventos')->orderBy('created_at','desc')->take(2)->get();
+    return view('index',compact('noticias','eventos'));
+});
+
+Route::get('/noticias/dash_index', function () {
+    $posts = DB::table('posts')->orderBy('created_at','desc')->get();
+    return view('noticias.dash_index',compact('posts'));
 });
 
 
